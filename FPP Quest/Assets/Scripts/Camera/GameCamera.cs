@@ -21,14 +21,7 @@ namespace Camera
 
         #region Init
         void Start()
-        {
-            _cameraSettings = Resources.Load<GameCameraSettings>(Constants.PATH_SETTINGS_GAME_CAMERA);
-
-            if (!_cameraSettings)
-            {
-                throw new GameCameraException("camera settings not found");
-            }
-
+        {           
             if (transform.parent == null)
             {
                 throw new GameCameraException("camerra must be child");
@@ -37,6 +30,13 @@ namespace Camera
             if (!transform.parent.TryGetComponent(out _character))
             {
                 throw new GameCameraException($"parent {name} not have component Character");
+            }
+                        
+            _cameraSettings = Resources.Load<GameCameraSettings>(Constants.PATH_SETTINGS_GAME_CAMERA);
+
+            if (!_cameraSettings)
+            {
+                throw new GameCameraException("camera settings not found");
             }
 
             _character.OnStateMoving += SetStateEnableRotating;
