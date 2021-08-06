@@ -21,7 +21,6 @@ namespace CharacterSystem
         private const string VERTICAL_AXIS = "Vertical";
         #endregion
 
-
         #region Fields
         private bool _enabledControl = true;
 
@@ -48,7 +47,6 @@ namespace CharacterSystem
         #region Properties
         public string IDActiveItem {get => _inventoryPlayer.ItemOnHand.Id; }
         #endregion
-
 
         #region Init
         void Start()
@@ -85,7 +83,7 @@ namespace CharacterSystem
 
         private void Update()
         {
-                Moving();
+         Moving();
 
         }
 

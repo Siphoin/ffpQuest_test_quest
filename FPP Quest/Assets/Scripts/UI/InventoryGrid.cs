@@ -29,7 +29,7 @@ namespace UI
         {
             _itemCellPrefab = Resources.Load<ItemCell>(Constants.PATH_PREFAB_ITEM_CELL);
 
-            if (!itemCellPrefab)
+            if (!_itemCellPrefab)
             {
                 throw new InventoryGridException("item cell prefab not found");
             }

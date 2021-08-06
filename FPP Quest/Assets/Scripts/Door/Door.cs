@@ -14,7 +14,6 @@ namespace DoorSystem
         private const float TIME_OUT_NOT_VALID_ITEM = 0.5f;
         #endregion
 
-
         #region Fields
 
         private bool _canInteraction = true;
@@ -50,7 +49,6 @@ namespace DoorSystem
             _defaultColor = _mesh.material.color;
         }
         #endregion
-
 
         #region Interaction
 
@@ -120,6 +118,7 @@ namespace DoorSystem
         {
             if (collision.gameObject.HasComponent<Character>())
             {
+                Character character = null;
                 SetStateEnteredPlayer(false);
 
             }
