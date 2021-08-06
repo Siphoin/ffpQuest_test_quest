@@ -16,7 +16,6 @@ namespace UI
 
         private bool _inited = false;
 
-
         private ItemCell[] _cells;
 
         private ItemCell _itemCellPrefab;
@@ -28,7 +27,6 @@ namespace UI
 
         private void Init()
         {
-
             _itemCellPrefab = Resources.Load<ItemCell>(Constants.PATH_PREFAB_ITEM_CELL);
 
             if (!itemCellPrefab)
@@ -57,8 +55,7 @@ namespace UI
         private void ReloadActiveCell(int index)
         {
             RedrawCells();
-
-
+            
             _cells[index].MarkEmtry();
 
         }
@@ -66,6 +63,7 @@ namespace UI
         private void RefreshGrid(Item item, int index)
         {
             RedrawCells();
+            
             _cells[index].SetData(item);
 
         }
@@ -75,8 +73,7 @@ namespace UI
             RedrawCells();
 
             _cells[index].SetColorActive();
-
-
+            
             _character.GetItemOnHand(item);
         }
 
@@ -103,6 +100,7 @@ namespace UI
             {
                 Init();
             }
+            
             RedrawCells();
 
 
