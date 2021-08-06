@@ -19,7 +19,7 @@ namespace UI
 
         private ItemCell[] _cells;
 
-        private ItemCell itemCellPrefab;
+        private ItemCell _itemCellPrefab;
 
         private Character _character;
 
@@ -29,7 +29,7 @@ namespace UI
         private void Init()
         {
 
-            itemCellPrefab = Resources.Load<ItemCell>(Constants.PATH_PREFAB_ITEM_CELL);
+            _itemCellPrefab = Resources.Load<ItemCell>(Constants.PATH_PREFAB_ITEM_CELL);
 
             if (!itemCellPrefab)
             {
@@ -40,7 +40,7 @@ namespace UI
 
             for (int i = 0; i < _cells.Length; i++)
             {
-                ItemCell newCell = Instantiate(itemCellPrefab, transform);
+                ItemCell newCell = Instantiate(_itemCellPrefab, transform);
                 newCell.OnSelect += SelectCell;
                 _cells[i] = newCell;
             }
