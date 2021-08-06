@@ -85,11 +85,7 @@ namespace CharacterSystem
 
         private void Update()
         {
-            if (_enabledControl)
-            {
                 Moving();
-
-            }
 
         }
 
