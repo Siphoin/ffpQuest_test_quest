@@ -92,14 +92,12 @@ namespace DoorSystem
 
         #endregion
 
-
-
-
         #region Color System
         public void SetColor(Color color)
         {
             _mesh.material.color = color;
         }
+        
         private IEnumerator AnimationNotValidItem()
         {
             SetColor(Color.red);
@@ -114,6 +112,7 @@ namespace DoorSystem
 
             yield return null;
         }
+        
         #endregion
 
         #region Collision Checking
