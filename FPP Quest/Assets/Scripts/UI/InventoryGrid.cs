@@ -103,7 +103,6 @@ namespace UI
             
             RedrawCells();
 
-
             if (!string.IsNullOrEmpty(_character.IDActiveItem))
             {
             _cells.First(x => x.CurrentItem.Id == _character.IDActiveItem).SetColorActive();
