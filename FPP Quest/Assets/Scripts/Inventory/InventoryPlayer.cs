@@ -18,9 +18,10 @@ namespace Inventory
         #region Properties
         public int Count { get => _items.Count; }
 
-
         public List<Item> Items { get => _items; }
+        
         public Item ItemOnHand { get => _itemOnHand; set => _itemOnHand = value; }
+        
         #endregion
 
 
